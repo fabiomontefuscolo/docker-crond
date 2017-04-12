@@ -5,13 +5,7 @@ RUN apk update && \
     apk add dcron && \
     rm -rf /var/cache/apk/*
 
-VOLUME [                        \
-        "/etc/periodic/15min",  \
-        "/etc/periodic/hourly", \
-        "/etc/periodic/daily",  \
-        "/etc/periodic/weekly", \
-        "/etc/periodic/monthly" \
-    ]
+VOLUME /etc/periodic
 
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]

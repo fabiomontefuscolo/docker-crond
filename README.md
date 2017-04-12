@@ -6,8 +6,8 @@ image by adding tools you need, like rsync, ssh, ncat or others.
 
 ## Using
 
-You should mount a folder with your scripts in crond container. The mounting
-points are described by their folder name.
+You should mount a folder with your scripts in crond container. The folders
+watched by cron daemon are:
 
 * /etc/periodic/15min
 * /etc/periodic/hourly

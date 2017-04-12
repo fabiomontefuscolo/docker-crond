@@ -2,6 +2,12 @@
 
 DAEMON=crond
 
+mkdir -p /etc/periodic/15min
+mkdir -p /etc/periodic/hourly
+mkdir -p /etc/periodic/daily
+mkdir -p /etc/periodic/weekly
+mkdir -p /etc/periodic/monthly
+
 stop() {
     echo "Received SIGINT or SIGTERM. Shutting down $DAEMON"
     pid=$(cat /var/run/$DAEMON/$DAEMON.pid)
